@@ -46,7 +46,7 @@ describe Endpoints::ProducerAPI::Messages do
       end
 
       it 'with bad data, returns a 422' do
-        @message_body = nil
+        @message_body = {}
         do_post
         expect(last_response.status).to eq(422)
       end
