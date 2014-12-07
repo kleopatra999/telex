@@ -22,7 +22,7 @@ gem "sidekiq"
 gem "sinatra", require: "sinatra/base"
 gem "sinatra-contrib", require: ["sinatra/namespace", "sinatra/reloader"]
 gem "sinatra-router"
-gem "sinatra-schema", path: "/Users/pedro/dev/sinatra-schema"
+gem "sinatra-schema"
 gem "sucker_punch"
 
 group :development, :test do
