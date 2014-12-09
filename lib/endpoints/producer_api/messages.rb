@@ -6,7 +6,7 @@ module Endpoints
       res.link(:post) do |link|
         link.property.text :title
         link.property.text :body
-        link.property[:target].text :id
+        link.property[:target].uuid :id
         link.property[:target].text :type
         link.action { create_message }
       end
