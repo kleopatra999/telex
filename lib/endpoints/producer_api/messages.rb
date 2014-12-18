@@ -3,7 +3,7 @@ module Endpoints
     resource("/messages") do |res|
       res.property.uuid :id
 
-      res.link(:post) do |link|
+      res.post do |link|
         link.property.text :title
         link.property.text :body
         link.property[:target].uuid :id
@@ -11,7 +11,7 @@ module Endpoints
         link.action { create_message }
       end
 
-      res.link(:post, "/:message_id/followups") do |link|
+      res.post "/:message_id/followups" do |link|
         link.property.text :body
         link.action { create_followup }
       end
